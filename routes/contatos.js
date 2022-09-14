@@ -1,6 +1,6 @@
 var express = require('express');
+const contatosController = require('../controllers/contatos');
 var router = express.Router();
-const contatosController = require('../controllers/contatos')
 
 
 
@@ -14,10 +14,10 @@ router.get('/', contatosController.listarContatos)
 router.get('/:id',contatosController.exibir)
 
 //POST cria novo contato
-router.post('/criar', contatosController.criar)
+router.post('/', contatosController.criar)
 
 //PUT atualiza contato pelo id
-router.put('/:id',)
+router.put('/:id',contatosController.atualizar)
 
 //DELETE deleta um contato pelo id
 router.delete('/:id', contatosController.remover)
