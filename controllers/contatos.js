@@ -1,9 +1,11 @@
 const contatos = [
     {
+        id: 1,
         name: "josé",
         fone: "8888-8888"
     },
     {
+        id: 2,
         name: "maria",
         fone: "9999-8888"
     }
@@ -55,4 +57,4 @@ function remover(req, res, next) {
 
 
 
-module.exports = { listarContatos, exibir, criar, atualizar }
+module.exports = { listarContatos, exibir, criar, atualizar, remover }
